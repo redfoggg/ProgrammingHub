@@ -7,6 +7,6 @@ namespace AuthAPI.Repository.Interfaces
     public interface IUserRepository : IRepositoryBase<User>
     {
          IList<User> Users();
-         User UserByUsername(string userName);
+         User UserByEmail(string email);
     }
 }

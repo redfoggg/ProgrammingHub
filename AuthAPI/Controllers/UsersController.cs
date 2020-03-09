@@ -21,7 +21,7 @@ namespace AuthAPI.Controllers
         [HttpPost("authenticate")]
         public IActionResult  Authenticate([FromBody]AuthenticateModel model)
         {
-            var user = _userService.Authenticate(model.UserName, model.Password);
+            var user = _userService.Authenticate(model.Email, model.Password);
 
             if(user == null)
                 return BadRequest(new { message = "Username or password incorrect"});

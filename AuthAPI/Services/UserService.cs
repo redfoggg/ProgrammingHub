@@ -24,12 +24,12 @@ namespace AuthAPI.Services
             _userRepository = userRepository;
             _appSettings = appSettings.Value;
         }
-        public User Authenticate(string username, string password)
+        public User Authenticate(string email, string password)
         {
 
             var users = _userRepository.GetAll();
-
-            var user = users.SingleOrDefault(x => x.UserName == username && x.Password == password);
+            
+            var user = users.SingleOrDefault(x => x.Email == email && x.Password == password);
             if(user == null)
                 return null;
 
@@ -41,7 +41,7 @@ namespace AuthAPI.Services
                 {
                     new Claim(ClaimTypes.Name, user.Id.ToString())
                 }),
-                Expires = DateTime.UtcNow.AddDays(7),
+                Expires = DateTime.UtcNow.AddHours(4),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);

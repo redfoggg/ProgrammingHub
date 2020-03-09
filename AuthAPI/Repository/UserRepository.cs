@@ -13,13 +13,13 @@ namespace AuthAPI.Repository
         public UserRepository(AuthContext context) : base (context) {}
 
         /// <summary>
-        /// Select a single one User filtred by Username
+        /// Select a single one User filtred by email
         /// </summary>
-        /// <param value="userName">userName</param>
+        /// <param value="email">email</param>
         /// <returns>User</returns>
-        public User UserByUsername(string userName)
+        public User UserByEmail(string email)
         {
-            return this.GetSingle(u => u.UserName == userName);
+            return this.GetSingle(u => u.Email == email);
         }
 
         /// <summary>

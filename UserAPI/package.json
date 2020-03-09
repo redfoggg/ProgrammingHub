@@ -17,6 +17,7 @@
     "@types/uuid": "^3.4.7",
     "argon2": "^0.26.0",
     "compression": "^1.7.4",
+    "core-util-is": "^1.0.2",
     "debug-logger": "^0.4.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

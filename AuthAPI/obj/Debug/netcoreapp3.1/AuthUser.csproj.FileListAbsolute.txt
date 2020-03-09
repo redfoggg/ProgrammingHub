@@ -1,5 +1,4 @@
 /home/davidmattos/Projetos/ProgrammingHub/AuthAPI/bin/Debug/netcoreapp3.1/appsettings.Development.json
-/home/davidmattos/Projetos/ProgrammingHub/AuthAPI/bin/Debug/netcoreapp3.1/appsettings.json
 /home/davidmattos/Projetos/ProgrammingHub/AuthAPI/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
 /home/davidmattos/Projetos/ProgrammingHub/AuthAPI/bin/Debug/netcoreapp3.1/AuthUser
 /home/davidmattos/Projetos/ProgrammingHub/AuthAPI/bin/Debug/netcoreapp3.1/AuthUser.deps.json
@@ -36,3 +35,4 @@
 /home/davidmattos/Projetos/ProgrammingHub/AuthAPI/obj/Debug/netcoreapp3.1/staticwebassets/AuthUser.StaticWebAssets.xml
 /home/davidmattos/Projetos/ProgrammingHub/AuthAPI/obj/Debug/netcoreapp3.1/AuthUser.dll
 /home/davidmattos/Projetos/ProgrammingHub/AuthAPI/obj/Debug/netcoreapp3.1/AuthUser.pdb
+/home/davidmattos/Projetos/ProgrammingHub/AuthAPI/bin/Debug/netcoreapp3.1/appsettings.json

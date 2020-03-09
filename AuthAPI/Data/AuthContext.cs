@@ -23,15 +23,15 @@ namespace AuthAPI.Data
         {
             modelBuilder.Entity<User>().ToTable("User");
             
-            modelBuilder.Entity<User>()
-                .Property(user => user.UserName)
-                .HasMaxLength(60)
-                .IsRequired();
+            // modelBuilder.Entity<User>()
+            //     .Property(user => user.UserName)
+            //     .HasMaxLength(60)
+            //     .IsRequired();
             
-            modelBuilder.Entity<User>()
-                .Property(user => user.Email)
-                .HasMaxLength(60)
-                .IsRequired();
+            // modelBuilder.Entity<User>()
+            //     .Property(user => user.Email)
+            //     .HasMaxLength(60)
+            //     .IsRequired();
         }
     }
 }
