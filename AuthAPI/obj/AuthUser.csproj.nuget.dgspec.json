@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/davidmattos/Projetos/ProgrammingHub/AuthUser/AuthUser.csproj": {}
+    "/home/davidmattos/Projetos/ProgrammingHub/AuthAPI/AuthUser.csproj": {}
   },
   "projects": {
-    "/home/davidmattos/Projetos/ProgrammingHub/AuthUser/AuthUser.csproj": {
+    "/home/davidmattos/Projetos/ProgrammingHub/AuthAPI/AuthUser.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/davidmattos/Projetos/ProgrammingHub/AuthUser/AuthUser.csproj",
+        "projectUniqueName": "/home/davidmattos/Projetos/ProgrammingHub/AuthAPI/AuthUser.csproj",
         "projectName": "AuthUser",
-        "projectPath": "/home/davidmattos/Projetos/ProgrammingHub/AuthUser/AuthUser.csproj",
+        "projectPath": "/home/davidmattos/Projetos/ProgrammingHub/AuthAPI/AuthUser.csproj",
         "packagesPath": "/home/davidmattos/.nuget/packages/",
-        "outputPath": "/home/davidmattos/Projetos/ProgrammingHub/AuthUser/obj/",
+        "outputPath": "/home/davidmattos/Projetos/ProgrammingHub/AuthAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/davidmattos/.nuget/NuGet/NuGet.Config"
@@ -35,6 +35,36 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
