@@ -9,17 +9,20 @@ using System.Security.Claims;
 using System;
 using AuthAPI.Repository.Interfaces;
 using System.Linq;
+using Microsoft.Extensions.Options;
+using AuthAPI.Repository;
 
 namespace AuthAPI.Services
 {
     public class UserService : IUserService
     {
         private readonly AppSettings _appSettings;
-        private UserRepository _userRepository;
+        private IUserRepository _userRepository;
 
-        public UserService(UserRepository userRepository)
+        public UserService(IUserRepository userRepository, IOptions<AppSettings> appSettings)
         {
             _userRepository = userRepository;
+            _appSettings = appSettings.Value;
         }
         public User Authenticate(string username, string password)
         {

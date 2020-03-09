@@ -3,8 +3,9 @@ using System.Linq;
 using AuthAPI.Data;
 using AuthAPI.Entities;
 using AuthAPI.Repository.Base;
+using AuthAPI.Repository.Interfaces;
 
-namespace AuthAPI.Repository.Interfaces
+namespace AuthAPI.Repository
 {
     public class UserRepository : RepositoryBase<User> , IUserRepository
     {

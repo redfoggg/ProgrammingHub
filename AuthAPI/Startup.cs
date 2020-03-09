@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AuthAPI.Data;
 using AuthAPI.Helpers;
+using AuthAPI.Repository;
+using AuthAPI.Repository.Interfaces;
 using AuthAPI.Services;
 using AuthAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -11,6 +14,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -34,6 +38,14 @@ namespace AuthUser
             services.AddCors();
             services.AddControllers();
 
+            services
+            .AddEntityFrameworkNpgsql()
+            .AddDbContext<AuthContext>(options => 
+                options.UseNpgsql(
+                    Configuration.GetConnectionString("ProgContext")
+                )
+            );
+            
             // configure strongly typed settings objects
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
@@ -59,6 +71,7 @@ namespace AuthUser
 
             //configure DI for application services
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserRepository, UserRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
