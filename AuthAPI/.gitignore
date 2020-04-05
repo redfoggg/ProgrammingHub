@@ -1,2 +1,6 @@
 appsettings.json
 /bin
+/obj
+/.vscode
+/Properties
+.gitignore
