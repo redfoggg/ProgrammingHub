@@ -30,7 +30,7 @@
     "redis": "^3.0.2",
     "reflect-metadata": "^0.1.13",
     "ts-node-dev": "^1.0.0-pre.44",
-    "typeorm": "^0.2.22",
+    "typeorm": "^0.3.0",
     "typescript": "^3.8.2",
     "uuid": "^3.4.0"
   },
